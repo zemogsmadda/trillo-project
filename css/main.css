@@ -58,7 +58,30 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 1;
-  height: 80rem;
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  font-size: 1.4rem;
+  background-color: #faf9f9;
+  border-bottom: 1px solid #faf9f9;
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*-------------------------LOGO-------------------------*/
@@ -319,8 +342,16 @@ body {
   transition: all .2s;
 }
 
+.btn-inline span {
+  transition: margin-left .2s;
+}
+
 .btn-inline:hover {
   color: #333;
+}
+
+.btn-inline:hover span {
+  margin-left: 8px;
 }
 
 .btn-inline:focus {
@@ -341,5 +372,186 @@ body {
     transform: scale(1);
     box-shadow: none;
   }
+}
+
+/*-------------------------Paragraph-------------------------*/
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+/*-------------------------List-------------------------*/
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  list-style: none;
+  border-top: 1px solid #faf9f9;
+  border-bottom: 1px solid #faf9f9;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  flex: 0 0 50%;
+  margin-bottom: .7rem;
+}
+
+.list-item::before {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: .7rem;
+  background-color: #eb2f64;
+  -webkit-mask-image: url(../img/chevron-thin-right.svg);
+  -webkit-mask-size: cover;
+}
+
+/*-------------------------Recommend-------------------------*/
+.recommend {
+  font-size: 1.3rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.recommend-count {
+  margin-right: auto;
+}
+
+.recommend-photo {
+  box-sizing: content-box;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.recommend-photo:not(:last-child) {
+  margin-right: -1.5rem;
+}
+
+/*-------------------------Reviews-------------------------*/
+.review {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-text {
+  margin-bottom: 2rem;
+  z-index: 10;
+  position: relative;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+}
+
+.review-user-box {
+  margin-right: auto;
+}
+
+.review-user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.review-user-date {
+  font-size: 1rem;
+  color: #999;
+}
+
+.review-photo {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.review-rating {
+  font-size: 2.2rem;
+  color: #eb2f64;
+  font-weight: 300;
+}
+
+.review::before {
+  content: "\201C";
+  position: absolute;
+  line-height: 1;
+  left: -1rem;
+  top: -2.75rem;
+  font-size: 20rem;
+  color: #f4f2f2;
+  font-family: sans-serif;
+  z-index: 1;
+}
+
+/*-------------------------Call to Action-------------------------*/
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.cta-book-now {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+/*-------------------------Call to Action-------------------------*/
+.btn {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, #FF3366, #BA265D);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-visible {
+  display: inline-block;
+  padding: 2rem 7.5rem;
+  height: 100%;
+  width: 100%;
+  transition: all .2s;
+}
+
+.btn-invisible {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 0rem;
+  left: 0;
+  top: -150%;
+  transition: all .2s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #FF3366, #BA265D);
+}
+
+.btn:hover .btn-visible {
+  transform: translateY(100%);
+}
+
+.btn:hover .btn-invisible {
+  top: 0;
+}
+
+.btn:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 /*# sourceMappingURL=main.css.map */
